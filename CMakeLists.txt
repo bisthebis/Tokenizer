@@ -6,9 +6,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE CXX STANDARD REQUIRED ON)
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
+set(CMAKE_LIBARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 
-find_package (Qt5Core REQUIRED)
 
-add_executable(tokenizer main.cpp)
-
-target_link_libraries(tokenizer Qt5::Core)
+add_subdirectory (src/token_utils )
+add_subdirectory (src) 
