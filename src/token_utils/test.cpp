@@ -1,5 +1,5 @@
 #include <QtCore>
-#include "test.hpp"
+#include "token_utils/test.hpp"
 
 void printHiAndQuit()
 {

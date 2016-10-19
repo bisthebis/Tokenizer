@@ -4,3 +4,4 @@ CMakeFiles/*
 *.o
 Makefile
 cmake_*
+build/*

@@ -11,5 +11,4 @@ set(CMAKE_LIBARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
 
 
-add_subdirectory (src/token_utils )
 add_subdirectory (src) 
