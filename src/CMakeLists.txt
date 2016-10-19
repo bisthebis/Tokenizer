@@ -1,5 +1,5 @@
-
-add_executable (tokenizer main.cpp )
+file(GLOB MAIN_FILES . *.cpp)
+add_executable (tokenizer ${MAIN_FILES} )
 
 find_package (Qt5Core REQUIRED)
 

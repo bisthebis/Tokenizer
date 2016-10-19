@@ -1,4 +1,5 @@
-add_library (token_utils test.cpp)
+file(GLOB TOKEN_UTILS_FILES . *.cpp)
+add_library (token_utils ${TOKEN_UTILS_FILES})
 
 find_package (Qt5Core REQUIRED)
 
