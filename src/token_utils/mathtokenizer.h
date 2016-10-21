@@ -10,6 +10,7 @@ class MathTokenizer
     public:
         MathTokenizer();
         static QPair<bool, int> isNumber(const QString& src);
+        static QPair<bool, QString> isSymbol(const QString& src);
 
 };
 

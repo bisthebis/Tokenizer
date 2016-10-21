@@ -3,9 +3,18 @@
 
 TEST_CASE("MathTokenizer::isNumber works" "[mathtokenizer]")
 {
-    QPair<bool, int> five = MathTokenizer::isNumber("  5\n");
+    auto five = MathTokenizer::isNumber("  5\n");
     REQUIRE((five.first && five.second == 5));
 
-    QPair<bool, int> strangeString = MathTokenizer::isNumber("azerty5 !");
+    auto strangeString = MathTokenizer::isNumber("azerty5 !");
     REQUIRE_FALSE(strangeString.first);
+}
+
+TEST_CASE("MathTokenizer::isSymbol works" "[mathtokenizer]")
+{
+    auto add = MathTokenizer::isSymbol("+");
+    REQUIRE((add.first && add.second == "+"));
+
+    auto add_expr = MathTokenizer::isSymbol("5 + 3");
+    REQUIRE_FALSE(add_expr.first);
 }

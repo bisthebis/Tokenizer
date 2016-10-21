@@ -14,3 +14,13 @@ QPair<bool, int> MathTokenizer::isNumber(const QString &src)
     else
         return QPair<bool, int>(true, match.captured().toInt());
 }
+
+QPair<bool, QString> MathTokenizer::isSymbol(const QString &src)
+{
+    static QRegularExpression regex("^([a-zA-Z_\\+\\-\\*\\/=\\?]+)$");
+    auto match = regex.match(src);
+    if (!match.hasMatch())
+        return QPair<bool, QString> (false, "");
+    else
+        return QPair<bool, QString> (true, match.captured());
+}
