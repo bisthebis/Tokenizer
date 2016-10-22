@@ -1,6 +1,6 @@
 #include "lisptokenizer.h"
 
-lisptokenizer::lisptokenizer()
+LISPTokenizer::LISPTokenizer()
 {
 
 }
